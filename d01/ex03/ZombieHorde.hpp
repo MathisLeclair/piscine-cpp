@@ -5,7 +5,9 @@ public:
 
     ZombieHorde(int N);
     ~ZombieHorde();
+    void annouce();
 
 private:
     Zombie *_zHorde;
+    int _nbZ;
 };
