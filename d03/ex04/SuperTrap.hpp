@@ -16,6 +16,7 @@ public:
     ~SuperTrap();
 
     SuperTrap & operator=(SuperTrap const & src);
+
 };
 
 #endif
