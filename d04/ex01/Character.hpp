@@ -21,6 +21,7 @@ public:
 
     std::string virtual getName() const;
     int virtual getAp() const;
+    AWeapon * getWeapon() const;
 
 private:
     std::string _name;
@@ -29,5 +30,7 @@ private:
     Character ();
 
 };
+
+std::ostream & operator<<(std::ostream & o, Character const & src);
 
 #endif

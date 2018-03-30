@@ -17,6 +17,10 @@ Enemy & Enemy::operator=(Enemy const & src){
     return (*this);
 }
 
+int Enemy::getHP() const{return this->_hp;}
+
+std::string Enemy::getType() const{return this->_type;}
+
 
 void Enemy::takeDamage(int damage){
     if (damage <= 0)

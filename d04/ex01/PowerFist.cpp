@@ -1,6 +1,6 @@
 #include "PowerFist.hpp"
 
-PowerFist::PowerFist():AWeapon("Power Fist Rifle", 50, 8){}
+PowerFist::PowerFist():AWeapon("Power Fist", 8, 50){}
 
 PowerFist::PowerFist(std::string const & name, int apcost, int damage){
     this->_name = name;

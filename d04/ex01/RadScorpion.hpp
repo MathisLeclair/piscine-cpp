@@ -14,8 +14,6 @@ public:
 
     RadScorpion & operator=(RadScorpion const & src);
 
-    void takeDamage(int damage);
-
 protected:
 };
 
