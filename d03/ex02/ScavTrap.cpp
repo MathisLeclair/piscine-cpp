@@ -14,7 +14,7 @@ ScavTrap::ScavTrap(std::string name):ClapTrap(name){
     std::cout << "<" << this->getName() << "> Let's get this party started!" << std::endl;
 }
 
-ScavTrap::ScavTrap(ScavTrap & src):ClapTrap(){
+ScavTrap::ScavTrap(ScavTrap & src):ClapTrap(src){
     std::cout << "<" << this->getName() << "> Hey! I'm You!" << std::endl;
     this->_hitpoint = src._hitpoint;
     this->_maxHitpoint = src._maxHitpoint;

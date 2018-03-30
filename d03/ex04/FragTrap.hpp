@@ -12,10 +12,10 @@ public:
 
     FragTrap & operator=(FragTrap const & src);
 
-    void rangedAttack(std::string const & target);
+    virtual void rangedAttack(std::string const & target);
     void meleeAttack(std::string const & target);
 
-    void vaulthunter_dot_exe(std::string const & target);
+    virtual void vaulthunter_dot_exe(std::string const & target);
 };
 
 #endif

@@ -16,7 +16,7 @@ NinjaTrap::NinjaTrap(std::string name):ClapTrap(name){
     std::cout << "<" << this->getName() << "> I can do more than open doors sir! We CL4P-TP units can be programmed to do anything from open doors to ninja-sassinate highly important Janitory officals!" << std::endl;
 }
 
-NinjaTrap::NinjaTrap(NinjaTrap & src){
+NinjaTrap::NinjaTrap(NinjaTrap & src):ClapTrap(src){
     std::cout << "<" << this->getName() << "> I can do more than open doors sir! We CL4P-TP units can be programmed to do anything from open doors to ninja-sassinate highly important Janitory officals!" << std::endl;
 
     this->_hitpoint = src._hitpoint;

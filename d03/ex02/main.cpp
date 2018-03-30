@@ -6,7 +6,9 @@ int main(void){
     ClapTrap clapTrap;
     FragTrap sragTrap("sragTrap");
     ScavTrap scavTrap("scavTrap");
+    ScavTrap clone_Scav = scavTrap;
 
+    std::cout << clone_Scav.getName() << std::endl;
 
     sragTrap.vaulthunter_dot_exe("enemie1");
     sragTrap.vaulthunter_dot_exe("enemie2");

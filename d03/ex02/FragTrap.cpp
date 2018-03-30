@@ -8,7 +8,7 @@ FragTrap::FragTrap(std::string name):ClapTrap(name){
     std::cout << "start bootup sequence.<" << this->getName() << "> Directive one: Protect humanity! Directive two: Obey Jack at all costs. Directive three: Dance!" << std::endl;
 }
 
-FragTrap::FragTrap(FragTrap & src){
+FragTrap::FragTrap(FragTrap & src):ClapTrap(src){
     std::cout << "start bootup sequence.<" << this->getName() << "> Directive one: Protect humanity! Directive two: Obey Jack at all costs. Directive three: Dance!" << std::endl;
 
     this->_hitpoint = src._hitpoint;
