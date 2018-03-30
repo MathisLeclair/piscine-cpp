@@ -1,5 +1,7 @@
 #include "Victim.hpp"
 
+Victim::Victim(){}
+
 Victim::Victim(std::string name):_name(name){
     std::cout << "Some random victim called " << name << " just popped !" << std::endl;
 }

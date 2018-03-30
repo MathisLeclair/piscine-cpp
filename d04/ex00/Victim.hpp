@@ -6,7 +6,6 @@
 
 class Victim {
 public:
-    Victim();
     Victim(std::string name);
     Victim(Victim & src);
     ~Victim();
@@ -19,6 +18,7 @@ public:
 
 protected:
     std::string _name;
+    Victim();
 
 };
 
