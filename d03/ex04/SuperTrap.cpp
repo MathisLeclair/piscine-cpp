@@ -47,3 +47,13 @@ SuperTrap & SuperTrap::operator=(SuperTrap const & src){
 SuperTrap::~SuperTrap(){
     std::cout << "<" << this->getName() << "> I'll die the way I lived: annoying!(~SuperTrap)" << std::endl;
 }
+
+void SuperTrap::rangedAttack(std::string const & target)
+{
+    FragTrap::rangedAttack(target);
+}
+
+void SuperTrap::meleeAttack(std::string const & target)
+{
+    NinjaTrap::rangedAttack(target);
+}

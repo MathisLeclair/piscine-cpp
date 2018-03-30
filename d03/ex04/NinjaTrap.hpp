@@ -15,7 +15,7 @@ public:
     NinjaTrap & operator=(NinjaTrap const & src);
 
     void rangedAttack(std::string const & target);
-    virtual void meleeAttack(std::string const & target);
+    void meleeAttack(std::string const & target);
 
     virtual void ninjaShoebox(ClapTrap & target);
     virtual void ninjaShoebox(NinjaTrap & target);

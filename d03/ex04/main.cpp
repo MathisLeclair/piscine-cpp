@@ -1,6 +1,7 @@
 #include "FragTrap.hpp"
 #include "ScavTrap.hpp"
 #include "NinjaTrap.hpp"
+#include "SuperTrap.hpp"
 
 int main(void){
 
@@ -8,6 +9,10 @@ int main(void){
     FragTrap fragTrap("fragTrap");
     ScavTrap scavTrap("scavTrap");
     NinjaTrap ninjaTrap("ninjaTrap");
+    SuperTrap superTrap("superTrap");
+
+    std::cout << std::endl << "SuperTrap stuff" << std::endl;
+    superTrap.meleeAttack("quelqun");
 
 
     std::cout << std::endl << "sragTrap VaultHunter" << std::endl;
