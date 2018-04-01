@@ -1,0 +1,4 @@
+/Users/mleclair/bordel/tmp/src/Fighter.class.cpp:1:10: fatal error: 'Fighter.class.hpp' file not found
+#include "Fighter.class.hpp"
+         ^~~~~~~~~~~~~~~~~~~
+1 error generated.
