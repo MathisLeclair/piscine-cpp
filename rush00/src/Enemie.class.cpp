@@ -5,7 +5,9 @@ Enemie::Enemie():Ship(){
 	std::cout << "OK" << std::endl;
 }
 
-Enemie::Enemie(int x, int y, int form, int speed):Ship(x, y, form),_oldTime(getTime() + speed),_speed(speed){}
+Enemie::Enemie(int x, int y, int form, int speed):Ship(x, y, form),_oldTime(getTime() + speed),_speed(speed){
+	setColor(2);
+}
 
 Enemie::Enemie(Enemie & src):Ship(src){}
 

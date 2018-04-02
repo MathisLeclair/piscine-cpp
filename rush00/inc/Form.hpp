@@ -19,7 +19,7 @@ struct form {
 	int rep[MAX_BLOCK];
 };
 
-extern form forms[3];
+extern form forms[6];
 
 class Form {
 public:
@@ -37,7 +37,11 @@ public:
 	void set(int *arr, int n);
 	int *getRep() const;
 	int getN() const;
+	void setColRow(int c, int r);
+	void setColor(int c);
+
 private:
+	Form();
 	int rep[MAX_BLOCK];
 	int col;
 	int row;

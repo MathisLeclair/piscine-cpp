@@ -1,7 +1,6 @@
 #ifndef BACKGROUND_CLASS_HPP
 # define BACKGROUND_CLASS_HPP
 
-#include "Game.hpp"
 #include "GameEntities.class.hpp"
 
 #define STAR_PERCENTAGE 15

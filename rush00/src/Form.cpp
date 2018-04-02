@@ -1,11 +1,10 @@
 #include "Form.hpp"
 
-form forms[3] = {
+form forms[6] = {
    {
-	   3,3,{
-		0, '*', 0,
-	  '*', '*', '*',
-		0, '*', 0
+	   3,2,{
+		0, '^', 0,
+	  '/', '|', '\\',
 	   }
    },
    {
@@ -16,10 +15,29 @@ form forms[3] = {
 	  }
    },
    {
-	   1,2,{
-		'|',
+	   1,1,{
 		'|',
 	   },
+   },
+   {
+	  3,2,{
+	   '*', '*', '*',
+         0, '*', 0,
+	  }
+   },
+   {
+	  3,2,{
+	   '*', '*', '*',
+       'v', '*', 'v',
+	  }
+   },
+   {
+	  6,4,{
+	   '*', '*', '*', '*', '*', '*',
+       'v', '*', '*', '*', '*', 'v',
+         0, 'v', '*', '*', 'v', 0,
+         0,  0,  'v', 'v', 0, 0,
+	  }
    }
 };
 
@@ -33,8 +51,10 @@ form forms[3] = {
 	this->color = 1;
 	//this->set(forms[0].rep, forms[0].col * forms[0].row);
 }*/
+
+Form::Form(){}
+
 Form::Form(int f){
-	std::cerr << "Form " << f << std::endl;
 	this->col = forms[f].col;
 	this->row = forms[f].row;
 	this->color = 1;
@@ -57,6 +77,7 @@ void Form::set(int *arr, int n){
 	}
 }
 
+void Form::setColor(int c){this->color = c;}
 
 int Form::getCol() const{ return this->col; }
 int Form::getRow() const{ return this->row; }
@@ -66,6 +87,10 @@ int *Form::getRep() const {
 }
 int Form::getN() const {
 	return getCol() * getRow();
+}
+void Form::setColRow(int c, int r){
+	this->col = c;
+	this->row = r;
 }
 
 int Form::get(int x, int y) const {

@@ -4,7 +4,7 @@
 
 int main(void){
 	srand(time(NULL));
-	Game g(0, 16);
+	Game g(0, 20);
 
 	g.loop();
 	return 0;

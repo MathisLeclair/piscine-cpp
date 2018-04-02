@@ -18,6 +18,7 @@ public:
 	void display(int x, int y, char c);
 	void displayForm(int x, int y, Form const & f);
 	void display(AGameEntities const & e);
+	void display(int x, int y, std::string const & n);
 
 	void setColor(int color);
 	void unsetColor(int color);

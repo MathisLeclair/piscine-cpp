@@ -6,7 +6,7 @@
 
 class Projectile: public AGameEntities {
 public:
-    Projectile();
+	Projectile();
     Projectile(int, int, int);
     Projectile(Projectile const & src);
     ~Projectile();
@@ -20,8 +20,7 @@ public:
 protected:
     int _damage;
     int _direction;
-private:
-    Form & createForm();
+
 };
 
 #endif

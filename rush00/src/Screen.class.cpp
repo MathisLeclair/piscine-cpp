@@ -16,13 +16,17 @@ Screen::Screen(){
 		init_pair(i, i, COLOR_BLACK);
 	}*/
 	refresh();
+
 	this->updateWindow();
 	//this->win;
-	this->br = BOARD_COLS;
-	this->bc = BOARD_LINES;
+	this->bc = BOARD_COLS;
+	this->br = BOARD_LINES;
 	this->win = newwin(this->br, this->bc, (LINES - this->bc) / 2, (COLS - this->br) / 2);
 	box(this->win, 0, 0);
-	init_pair(1, COLOR_RED, COLOR_BLACK);
+	init_pair(1, COLOR_GREEN, COLOR_BLACK);
+	init_pair(2, COLOR_RED, COLOR_BLACK);
+	init_pair(3, COLOR_YELLOW, COLOR_BLACK);
+	init_pair(4, COLOR_WHITE, COLOR_BLACK);
 }
 
 Screen::Screen(Screen const &src){*this = src;}
@@ -61,6 +65,11 @@ void Screen::display(int x, int y, char c){
 	mvwprintw(this->win, y, x, tmp);
 }
 
+void Screen::display(int x, int y, std::string const & n){
+	int s = n.length();
+	mvwprintw(this->win, y, x - (s/2), n.c_str());
+}
+
 void Screen::render(){
 	wrefresh(this->win);
 }
@@ -72,7 +81,6 @@ void Screen::clear(){
 
 void Screen::displayForm(int x, int y, Form const & f){
 	this->setColor(f.getColor());
-
 	for (int ir = 0; ir < f.getRow(); ir += 1){
 		for (int ic = 0; ic < f.getCol(); ic += 1){
 			this->display(x + ic, y + ir, f.get(ic,ir));

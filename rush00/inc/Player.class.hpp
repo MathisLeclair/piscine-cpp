@@ -4,6 +4,8 @@
 # include "Ship.class.hpp"
 # include "Screen.class.hpp"
 
+#include "use.hpp"
+
 class Player: public Ship{
 public:
     Player(int, int);

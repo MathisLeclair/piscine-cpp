@@ -5,7 +5,8 @@ Background::Background():AGameEntities(0,0,0){
     int i = -1;
     while (++i < COLS)
         line[i] = rand() % 100 > STAR_PERCENTAGE ? '.' : '0';
-    this->_form.set(line, COLS);
+    this->_form.set(line, COLS-1);
+	this->_form.setColRow(COLS, 1);
 }
 
 Background::Background(Background const & src){

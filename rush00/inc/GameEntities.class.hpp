@@ -3,6 +3,7 @@
 
 # include <iostream>
 # include "Form.hpp"
+# include "use.hpp"
 
 class AGameEntities {
     public:
@@ -19,11 +20,15 @@ class AGameEntities {
 		int getPos(int i) const;
         Form const & getForm() const;
         int getHp() const;
+        bool getExist() const;
 
         void setHp( int );
+		void setColor(int c);
 
         bool virtual nextFrame( int );
-        void takeDamage( int );
+		void takeDamage( int );
+        void kill();
+        bool exist();
 
         //10
         //int _wait;
@@ -31,6 +36,7 @@ class AGameEntities {
         int _hp;
         int _pos[2];
         Form _form;
+        bool _exist;
 };
 
 #endif

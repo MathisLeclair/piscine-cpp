@@ -3,8 +3,8 @@
 
 # include "Ship.class.hpp"
 
-# define FIGHTER_SPEED 100
-# define BOMBER_SPEED 200
+# define FIGHTER_SPEED 1000
+# define BOMBER_SPEED 2000
 # define BOSS_SPEED INT_MAX
 
 class Enemie: public Ship {
