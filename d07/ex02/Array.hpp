@@ -29,7 +29,7 @@ template <class T> T & Array<T>::operator[]( size_t i ){
     return _array[i];
 }
 template <class T> Array<T> & Array<T>::operator=( Array const & src){
-    delete[] (src._array);
+    delete[] (this->_array);
     this->_array = new T[src._size];
     for (size_t i = 0; i < src._size; i++) {    this->_array[i] = src._array[i];    }
     this->_size = src._size;
